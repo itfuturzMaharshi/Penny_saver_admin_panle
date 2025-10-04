@@ -55,7 +55,9 @@ export default function SignInForm() {
         email: data.email, 
         password: data.password 
       });
-      if (response.data) {
+      
+      // Check if login was successful
+      if (response.status === 200 && response.data?.token) {
         toastHelper.success("Logged in successfully");
         navigate("/home");
       }
@@ -189,7 +191,7 @@ export default function SignInForm() {
               </div>
             </form>
 
-            <div className="mt-5">
+            {/* <div className="mt-5">
               <p className="text-sm font-normal text-center text-gray-700 dark:text-gray-400 sm:text-start">
                 Don&apos;t have an account? {""}
                 <Link
@@ -199,7 +201,7 @@ export default function SignInForm() {
                   Sign Up
                 </Link>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

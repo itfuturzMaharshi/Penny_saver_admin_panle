@@ -18,9 +18,11 @@ import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
-import Products from "./pages/Products/Products";
 import VerifyEmail from "./pages/AuthPages/VerifyEmail";
 import VerifyNotice from "./pages/AuthPages/VerifyNotice";
+import Users from "./pages/Users/Users";
+import Admin from "./pages/Admin/Admin";
+import Categories from "./pages/Categories/Categories";
 
 export default function App() {
   return (
@@ -39,7 +41,9 @@ export default function App() {
             <Route path="/profile" element={<UserProfiles />} />
             {/* <Route path="/calendar" element={<Calendar />} /> */}
             <Route path="/blank" element={<Blank />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/users" element={<Users />} />
+             <Route path="/categories" element={<Categories />} />
 
             {/* Forms */}
             <Route path="/form-elements" element={<FormElements />} />

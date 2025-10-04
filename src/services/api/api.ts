@@ -2,7 +2,7 @@ import axios, { AxiosResponse, AxiosError, InternalAxiosRequestConfig } from 'ax
 import { SocketService } from '../socket/socket';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_BASE_URL || 'http://localhost:3200',
+  baseURL: import.meta.env.VITE_BASE_URL || 'https://dlc4wp23-5000.inc1.devtunnels.ms',
   timeout: 10000,
 });
 

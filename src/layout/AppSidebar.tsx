@@ -15,15 +15,21 @@ const navItems: NavItem[] = [
     name: "Dashboard",
     path: "/home",
   },
-  // {
-  //   icon: <i className="fas fa-calendar-alt"></i>,
-  //   name: "Calendar",
-  //   path: "/calendar",
-  // },
   {
-    icon: <i className="fas fa-box-open"></i>,
-    name: "Products",
-    path: "/products",
+    icon: <i className="fa-solid fa-user-tie"></i>,
+    name: "Admin",
+    path: "/admin",
+  },
+
+  {
+    icon: <i className="fa-solid fa-users"></i>,
+    name: "Users",
+    path: "/users",
+  },
+  {
+    icon: <i className="fa-solid fa-list"></i>,
+    name: "Categories",
+    path: "/categories",
   },
 ];
 
@@ -35,7 +41,9 @@ const AppSidebar: React.FC = () => {
     type: "main";
     index: number;
   } | null>(null);
-  const [subMenuHeight, setSubMenuHeight] = useState<Record<string, number>>({});
+  const [subMenuHeight, setSubMenuHeight] = useState<Record<string, number>>(
+    {}
+  );
   const subMenuRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const isActive = useCallback(
@@ -116,7 +124,9 @@ const AppSidebar: React.FC = () => {
                 {nav.icon}
               </span>
               {(isExpanded || isHovered || isMobileOpen) && (
-                <span className="menu-item-text text-base ml-2 flex-1">{nav.name}</span>
+                <span className="menu-item-text text-base ml-2 flex-1">
+                  {nav.name}
+                </span>
               )}
               {(isExpanded || isHovered || isMobileOpen) && (
                 <i
@@ -147,7 +157,9 @@ const AppSidebar: React.FC = () => {
                   {nav.icon}
                 </span>
                 {(isExpanded || isHovered || isMobileOpen) && (
-                  <span className="menu-item-text text-base ml-2 flex-1">{nav.name}</span>
+                  <span className="menu-item-text text-base ml-2 flex-1">
+                    {nav.name}
+                  </span>
                 )}
               </Link>
             )

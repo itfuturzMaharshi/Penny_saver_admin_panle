@@ -52,7 +52,6 @@ export interface GetCategoriesParams {
 export interface CreateCategoryRequest {
   name: string;
   categoryType: string;
-  isActive?: boolean;
 }
 
 export interface UpdateCategoryRequest {
